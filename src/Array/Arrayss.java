@@ -18,6 +18,33 @@ public void input(int []a){
     for(int i=0;i<a.length;i++)
         a[i]=scanner.nextInt();
 }
+public void update(int[]a, int index, int nvalue){
+    if(index<0 || index >=a.length)
+        System.out.println("Index not found");
+    else
+    {
+    a[index]=nvalue;
+    }
+}
+    public void delete(int[]a, int index){
+        if(index<0 || index >=a.length)
+            System.out.println("Index not found");
+        else
+        {
+            a[index]=0;
+        }
+    }
+
+    public int linearSearch(int []a,int svalue){
+    for(int i=0; i<a.length;i++)
+    {
+        if(svalue==a[i])
+            return i;
+    }
+    return -1;
+    }
+
+
 
 
 }
